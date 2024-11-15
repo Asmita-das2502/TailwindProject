@@ -23,4 +23,11 @@
   .ankerhover {
     @apply border-b border-dotted border-y-gray-300 hover:border-solid hover:border-gray-500;
   }
+
+  /* .hover-gradiant-outer {
+    @apply bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover: via-purple-200 hover: to-yellow-200;
+  }
+  .hover-gradiant-inner {
+    @apply bg-slate-50 group-hover:bg-gradient-to-br group-hover:from-red-100 group-hover: via-purple-100 hover: to-yellow-100;
+  } */
 }
