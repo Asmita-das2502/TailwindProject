@@ -55,34 +55,13 @@ setupIntersectionObserver(line2, false, 0.15);
 setupIntersectionObserver(line3, true, 0.15);
 setupIntersectionObserver(line4, true, 0.8);
 
-// const dtElements = document.querySelectorAll("dt");
-// dtElements.forEach((element) => {
-//   element.addEventListener("click", () => {
-//     const ddId = element.getAttribute("aria-controls");
-//     const ddElement = document.getElementById(ddId);
-//     const ddArrowIcon = element.querySelectorAll("i")[0];
-//     ddElement.classList.toggle("hidden");
-//     ddArrowIcon.classList.toggle("-rotate-180");
-//   });
-// });
-
 const dtElements = document.querySelectorAll("dt");
 dtElements.forEach((element) => {
   element.addEventListener("click", () => {
     const ddId = element.getAttribute("aria-controls");
     const ddElement = document.getElementById(ddId);
-
-    // Check if ddElement exists before toggling the class
-    if (ddElement) {
-      ddElement.classList.toggle("hidden");
-    } else {
-      console.error(`No element found with ID: ${ddId}`);
-    }
-
-    // Handle ddArrowIcon - iterate over NodeList or use querySelector
-    const ddArrowIcons = element.querySelectorAll("i");
-    ddArrowIcons.forEach((icon) => {
-      icon.classList.toggle("-rotate-180");
-    });
+    const ddArrowIcon = element.querySelectorAll("i")[0];
+    ddElement.classList.toggle("hidden");
+    ddArrowIcon.classList.toggle("-rotate-180");
   });
 });

@@ -12,7 +12,9 @@
   </head>
   <body class="overflow-x-hidden">
     <!-- Navbar -->
-    <nav class="p-3 bg-white items-center flex justify-between">
+    <nav
+      class="p-3 bg-white items-center flex justify-between fixed top-0 left-0 right-0 z-20 shadow-md"
+    >
       <a href="#" id="brand" class="flex gap-2 items-center flex-1">
         <img
           class="object-cover max-w-12 max-h-12"
@@ -96,7 +98,7 @@
       </div>
     </nav>
     <!-- main -->
-    <main>
+    <main class="mt-16">
       <!-- hero section -->
       <div
         id="hero"
@@ -629,12 +631,12 @@
       <!-- step by step -->
       <div
         id="step"
-        class="bg-white flex flex-col gap-6 px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 lg:mt-32"
+        class="bg-white flex flex-col gap-6 px-6 py-12 max-w-7xl mt-20 mx-auto lg:px-8 lg:mt-32"
       >
         <h2 class="text-5xl sm:font-semibold mb-14">How it works</h2>
         <div
           id="step1"
-          class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row bg-blue-50"
+          class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row bg-blue-50 justify-between"
         >
           <div class="flex flex-col gap-6 lg:w-1/2">
             <span
@@ -703,7 +705,7 @@
         </div>
         <div
           id="step2"
-          class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row bg-blue-50"
+          class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row bg-blue-50 justify-between"
         >
           <div class="flex flex-col gap-6 lg:w-1/2">
             <span
@@ -790,7 +792,7 @@
         </div>
         <div
           id="step3"
-          class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row bg-blue-50"
+          class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row bg-blue-50 justify-between"
         >
           <div class="flex flex-col gap-6 lg:w-1/2">
             <span
@@ -1364,13 +1366,16 @@
       <!-- FAQs -->
       <div id="faq" class="container">
         <h2 class="text-5xl leading-normal sm:font-semibold max-w-2xl">FAQs</h2>
-        <div class="grid grid-col-1 lg:grid-col-2 mt-6 gap-6">
+        <div class="grid grid-col-1 lg:grid-col-2 mt-6 gap-6 items-start">
           <div class="group rounderd-xl border border-grey-200 bg-gray-50 p-6">
-            <dt class="flex justify-between items-center" aria-controls="feq-1">
+            <dt
+              class="cursor-pointer flex justify-between items-center"
+              aria-controls="feq-1"
+            >
               <p class="font-semibold text-lg">Is Todesktop For Me?</p>
-              <i class="fa-solid fa-chevron-up -rotate-180"></i>
+              <i class="fa-solid fa-chevron-up -rotate-180 transition"></i>
             </dt>
-            <dd id="faq-1" class="text-lg font-light mt-6 hidden">
+            <dd id="feq-1" class="text-lg font-light mt-6 hidden">
               <p>
                 That depends! If you would like to distribute your web app to
                 your users as a downloadable desktop app then ToDesktop is for
@@ -1395,97 +1400,109 @@
             </dd>
           </div>
           <div class="group rounderd-xl border border-grey-200 bg-gray-50 p-6">
-            <dt class="flex justify-between items-center" aria-controls="feq-2">
-              <p class="font-semibold text-lg">Is Todesktop For Me?</p>
+            <dt
+              class="cursor-pointer flex justify-between items-center"
+              aria-controls="feq-2"
+            >
+              <p class="font-semibold text-lg">
+                Can I try ToDesktop without buying?
+              </p>
               <i class="fa-solid fa-chevron-up -rotate-180"></i>
             </dt>
-            <dd id="faq-2" class="text-lg font-light mt-6 hidden">
+            <dd id="feq-2" class="text-lg font-light mt-6 hidden">
               <p>
-                That depends! If you would like to distribute your web app to
-                your users as a downloadable desktop app then ToDesktop is for
-                you. If you want to make a desktop app of a website for your
-                personal use, ToDesktop is overkill. What’s the difference?
-                There are extra considerations when creating a desktop app for
-                distribution to customers. Here are the top 3: Installer — Mac
-                users expect a “drag to applications” DMG file. Windows users
-                expect an installer and they also expect to be able to uninstall
-                it from the control panel. Code Signing — By default Windows
-                Authenticode and Apple Gatekeeper will stop your desktop app
-                opening.Signing your code allows your app to open without
-                issues. Auto-update — There is a web browser running
-                “underneath” your desktop app. It’s important to keep this
-                updated for two reasons. Security issues + vulnerabilities can
-                occur. Auto-update ensures that they stay patched over time. You
-                don’t want to be stuck supporting an old web browser in 5 years
-                from now. This can happen if your desktop app’s underlying web
-                browser hasn’t updated. ToDesktop offers these features as
-                standard! Saving you a ton of development time and effort.
+                Yes. You can get started by downloading ToDesktop Builder at no
+                cost. After installing it, you can build your desktop
+                application and preview it by clicking the “Run” button. This
+                allows you to test the app on your own computer to ensure it
+                performs to your expectations. If you’re using a Mac and wish to
+                add the app to your “Applications” folder for easier access,
+                simply follow these steps: Right-click on the app’s dock icon
+                while it’s running. Select “Options” and then “Show in Finder.”
+                Drag the application into your Applications directory, allowing
+                you to use it just like any other installed app. Should you
+                decide to distribute your application to a wider
+                audience—complete with code signing and a native
+                installer—you’ll need to purchase a subscription.
               </p>
             </dd>
           </div>
           <div class="group rounderd-xl border border-grey-200 bg-gray-50 p-6">
-            <dt class="flex justify-between items-center" aria-controls="feq-3">
-              <p class="font-semibold text-lg">Is Todesktop For Me?</p>
+            <dt
+              class="cursor-pointer flex justify-between items-center"
+              aria-controls="feq-3"
+            >
+              <p class="font-semibold text-lg">
+                Do you collect or store data about my customers?
+              </p>
               <i class="fa-solid fa-chevron-up -rotate-180"></i>
             </dt>
-            <dd id="faq-3" class="text-lg font-light mt-6 hidden">
+            <dd id="feq-3" class="text-lg font-light mt-6 hidden">
               <p>
-                That depends! If you would like to distribute your web app to
-                your users as a downloadable desktop app then ToDesktop is for
-                you. If you want to make a desktop app of a website for your
-                personal use, ToDesktop is overkill. What’s the difference?
-                There are extra considerations when creating a desktop app for
-                distribution to customers. Here are the top 3: Installer — Mac
-                users expect a “drag to applications” DMG file. Windows users
-                expect an installer and they also expect to be able to uninstall
-                it from the control panel. Code Signing — By default Windows
-                Authenticode and Apple Gatekeeper will stop your desktop app
-                opening.Signing your code allows your app to open without
-                issues. Auto-update — There is a web browser running
-                “underneath” your desktop app. It’s important to keep this
-                updated for two reasons. Security issues + vulnerabilities can
-                occur. Auto-update ensures that they stay patched over time. You
-                don’t want to be stuck supporting an old web browser in 5 years
-                from now. This can happen if your desktop app’s underlying web
-                browser hasn’t updated. ToDesktop offers these features as
-                standard! Saving you a ton of development time and effort.
+                No. When a ToDesktop app opens it contacts the our servers to
+                check if an update is available. We do not collect or store any
+                user data from these requests.
               </p>
             </dd>
           </div>
           <div class="group rounderd-xl border border-grey-200 bg-gray-50 p-6">
-            <dt class="flex justify-between items-center" aria-controls="feq-4">
-              <p class="font-semibold text-lg">Is Todesktop For Me?</p>
+            <dt
+              class="cursor-pointer flex justify-between items-center"
+              aria-controls="feq-4"
+            >
+              <p class="font-semibold text-lg">
+                Does ToDesktop work with sites built with ___?
+              </p>
               <i class="fa-solid fa-chevron-up -rotate-180 translate"></i>
             </dt>
-            <dd id="faq-4" class="text-lg font-light mt-6 hidden">
+            <dd id="feq-4" class="text-lg font-light mt-6 hidden">
               <p>
-                That depends! If you would like to distribute your web app to
-                your users as a downloadable desktop app then ToDesktop is for
-                you. If you want to make a desktop app of a website for your
-                personal use, ToDesktop is overkill. What’s the difference?
-                There are extra considerations when creating a desktop app for
-                distribution to customers. Here are the top 3: Installer — Mac
-                users expect a “drag to applications” DMG file. Windows users
-                expect an installer and they also expect to be able to uninstall
-                it from the control panel. Code Signing — By default Windows
-                Authenticode and Apple Gatekeeper will stop your desktop app
-                opening.Signing your code allows your app to open without
-                issues. Auto-update — There is a web browser running
-                “underneath” your desktop app. It’s important to keep this
-                updated for two reasons. Security issues + vulnerabilities can
-                occur. Auto-update ensures that they stay patched over time. You
-                don’t want to be stuck supporting an old web browser in 5 years
-                from now. This can happen if your desktop app’s underlying web
-                browser hasn’t updated. ToDesktop offers these features as
-                standard! Saving you a ton of development time and effort.
+                Wordpress? Yes. Squarespace? Yup. Wix? Of course. Shopify?
+                Definitely. React? You bet. Vue? Affirmative. PHP? 100%. Go?
+                Absolutely. If you’re noticing a trend here, that’s because
+                ToDesktop works with sites built with any technology stack. If
+                it works in your browser it will work as a ToDesktop app.
               </p>
             </dd>
           </div>
         </div>
       </div>
-
-      <div class="h-[1000px]"></div>
     </main>
+    <footer class="container">
+      <div
+        class="rounded-lg border lg:border-none lg:bg-gray-50 bg-gray-50 flex flex-col lg:flex-row-reverse items-center px-8 py-12 gap-8"
+      >
+        <a href="#" class="font-light font-display">Documantaion</a>
+        <div class="flex gap-8 text-lg">
+          <a href="#" class="text-gray-600 hover:text-gray-900"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a href="#" class="text-gray-600 hover:text-gray-900"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </div>
+        <a href="#" id="brand" class="flex gap-2 items-center flex-1">
+          <img
+            class="object-cover max-w-12 max-h-12"
+            src="./assets/asset 0.png"
+            alt="logo"
+          />
+          <span class="text-lg font-medium font- display">ToDesktop</span>
+        </a>
+      </div>
+      <div
+        id="sub-footer"
+        class="flex flex-col item-center justify-center my-12 gap-6 text-center"
+      >
+        <div class="flex gap-2 items-center text-center justify-center">
+          <img class="w-4 h-4" src="./assets/asset 54.svg" alt="" />
+          <p class="text-sm text-gray-600">A Y Combinator company.</p>
+        </div>
+        <p class="text-sm text-gray-400">
+          © 2024 ToDesktop, Inc. All rights reserved.
+        </p>
+      </div>
+    </footer>
   </body>
   <script src="script.js"></script>
 </html>
